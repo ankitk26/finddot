@@ -22,18 +22,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           content: "width=device-width, initial-scale=1",
         },
         {
-          title: "TanStack Start Starter",
+          title: "finddot | Discover, check, and secure your ideal domain",
         },
       ],
       links: [
         {
           rel: "stylesheet",
-          href: appCss,
+          href: "https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap",
         },
-
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap",
+          href: appCss,
         },
       ],
     }),
