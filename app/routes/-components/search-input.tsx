@@ -12,8 +12,8 @@ export default function SearchInput() {
 
   return (
     <div className="border p-4 rounded-xl mt-8">
-      <h2 className="text-xl font-semibold">Search domain</h2>
-      <Label className="mt-4">Enter desired domain name</Label>
+      <h2 className="text-xl font-semibold">Search site availablity</h2>
+      <Label className="mt-4">Enter site name</Label>
       <form
         className="flex items-center mt-2 mb-1 gap-2"
         onSubmit={(e) => {

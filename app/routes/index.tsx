@@ -30,7 +30,7 @@ function RouteComponent() {
         <h1 className="text-2xl font-semibold">finddot</h1>
       </div>
       <p className="text-center text-muted-foreground">
-        Discover, check, and secure your ideal domain
+        Instant domain and site check
       </p>
 
       <SearchInput />
