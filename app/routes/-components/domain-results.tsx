@@ -1,4 +1,4 @@
-import { useQuery, useSuspenseQuery } from "@tanstack/react-query";
+import { useSuspenseQuery } from "@tanstack/react-query";
 import { useSearch } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
 import { SearchCheckIcon, SearchXIcon } from "lucide-react";
@@ -39,7 +39,7 @@ export default function DomainResults() {
 
   return (
     <div className="border rounded-xl mt-8 p-4">
-      <h2 className="text-xl font-semibold">Results for "finddot"</h2>
+      <h2 className="text-xl font-semibold">Results for "{domain}"</h2>
 
       <div className="flex flex-col gap-4 mt-4">
         {sites.map((site) => (

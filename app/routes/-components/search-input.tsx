@@ -34,7 +34,7 @@ export default function SearchInput() {
         }}
       >
         <Input
-          placeholder="finddot"
+          placeholder="Examples - finddot, tanstack, vercel"
           className="grow"
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}

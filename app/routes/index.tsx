@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GlobeIcon, Loader2Icon } from "lucide-react";
+import { Suspense } from "react";
 import DomainResults from "./-components/domain-results";
 import SearchInput from "./-components/search-input";
-import { Suspense } from "react";
 
 type SearchParams = {
   domain?: string;
@@ -21,6 +21,8 @@ export const Route = createFileRoute("/")({
 });
 
 function RouteComponent() {
+  const { domain } = Route.useSearch();
+
   return (
     <div className="min-h-screen max-w-3xl w-full mx-auto p-4 flex flex-col items-stretch">
       <div className="flex items-center justify-center gap-2">
@@ -33,13 +35,15 @@ function RouteComponent() {
 
       <SearchInput />
 
-      <Suspense
-        fallback={
-          <Loader2Icon className="mt-8 animate-spin flex items-center w-full" />
-        }
-      >
-        <DomainResults />
-      </Suspense>
+      {domain && (
+        <Suspense
+          fallback={
+            <Loader2Icon className="mt-8 animate-spin flex items-center w-full" />
+          }
+        >
+          <DomainResults />
+        </Suspense>
+      )}
     </div>
   );
 }
