@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { GlobeIcon, Loader2Icon } from "lucide-react";
 import { Suspense } from "react";
-import DomainResults from "./-components/domain-results";
-import SearchInput from "./-components/search-input";
+import DomainResults from "../components/domain-results";
+import SearchInput from "../components/search-input";
 
 type SearchParams = {
   domain?: string;

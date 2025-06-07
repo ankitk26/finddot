@@ -1,4 +1,4 @@
-import { useNavigate } from "@tanstack/react-router";
+import { useNavigate, useSearch } from "@tanstack/react-router";
 import { SearchIcon } from "lucide-react";
 import { useState } from "react";
 import { Button } from "~/components/ui/button";
@@ -6,7 +6,9 @@ import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
 
 export default function SearchInput() {
-  const [searchInput, setSearchInput] = useState("");
+  const { domain } = useSearch({ from: "/" });
+
+  const [searchInput, setSearchInput] = useState(domain ?? "");
   const [validationError, setValidationError] = useState("");
   const navigate = useNavigate();
 
